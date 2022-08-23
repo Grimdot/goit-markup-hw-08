@@ -2,13 +2,6 @@
   border-top: 1px solid $header-border-color;
 }
 
-.examples__card-list {
-  display: flex;
-
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
 .examples__link {
   display: block;
 
@@ -18,6 +11,12 @@
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.examples__card-items {
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 

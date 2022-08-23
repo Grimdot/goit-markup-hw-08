@@ -35,15 +35,6 @@ img {
   }
 }
 
-.header-link {
-  display: block;
-
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  @include font(null, 500, 1.14, 0.02em);
-}
-
 .current {
   position: relative;
   color: $accent-color;

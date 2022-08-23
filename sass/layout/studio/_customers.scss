@@ -1,14 +1,13 @@
 .customers__list {
   display: flex;
+
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .customers__item {
-  width: 170px;
+  width: 210px;
   height: 92px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .customers__link {

@@ -1,9 +1,13 @@
 .logo {
-  margin-right: 93px;
-
+  display: inline-flex;
   font-family: 'Raleway', sans-serif;
-  @include font(26px, 700, 1.19, null);
+  @include font(24px, 700, 1.17, null);
   color: inherit;
+}
+
+.logo--main {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .logo--accent {

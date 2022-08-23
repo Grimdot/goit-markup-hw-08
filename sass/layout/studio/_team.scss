@@ -2,12 +2,8 @@
   background-color: $secondary-background-color;
 }
 
-.team__member-list {
-  display: flex;
-}
-
 .team__member-card {
-  width: 270px;
+  max-width: 480px;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -15,13 +11,13 @@
   background-color: $background-color;
 }
 
-.team__member,
+.team__member-name,
 .team__member-profession {
   @include font(16px, null, 1.19, null);
   text-align: center;
 }
 
-.team__member {
+.team__member-name {
   margin-bottom: 10px;
 
   @include font(null, 500, null, null);
@@ -39,7 +35,7 @@
   border-radius: 0px 0px 4px 4px;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
 

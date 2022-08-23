@@ -20,44 +20,95 @@
 
   <body>
     <header class="header">
-      <div class="container header-container">
-        <nav class="header-nav">
-          <a href="./index.html" class="logo link"><span class="logo--accent">Web</span>Studio</a>
+      <div class="container header-menu">
+        <a href="./index.html" class="logo logo--main link">
+          <span class="logo--accent">Web</span>Studio
+        </a>
 
-          <ul class="header-nav__list list">
-            <li class="header-nav__item">
-              <a href="./index.html" class="link active-link header-link">Студія</a>
+        <button
+          type="button"
+          class="menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="menu-btn__icon"
+            width="24px"
+            height="16px"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use class="icon-menu" href="./images/icons.svg#icon-nav-open"></use>
+          </svg>
+        </button>
+
+        <div class="header-menu__nav js-menu-container">
+          <button
+            type="button"
+            class="menu-btn menu-btn--close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="menu-btn__icon"
+              width="24px"
+              height="16px"
+              aria-label="Перемикач мобільного меню"
+            >
+              <use class="icon-cross" href="./images/icons.svg#icon-nav-close"></use>
+            </svg>
+          </button>
+
+          <nav class="header-nav__main-nav">
+            <ul class="header-nav__list list">
+              <li class="header-nav__item">
+                <a href="./index.html" class="link active-link header-link">Студія</a>
+              </li>
+              <li class="header-nav__item">
+                <a href="./portfolio.html" class="link active-link header-link"> Портфоліо</a>
+              </li>
+              <li class="header-nav__item">
+                <a href="./test.html" class="link active-link header-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contact-us list">
+            <li class="contact-us__item contact-us__tel">
+              <a href="tel:+380961111111" class="link contact-us__link active-link header-link">
+                <svg class="contact-us__tel-icon contact-us__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="header-nav__item">
-              <a href="./portfolio.html" class="link current active-link header-link"> Портфоліо</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="./test.html" class="link active-link header-link">Контакти</a>
+            <li class="contact-us__item contact-us__mail">
+              <a
+                href="mailto:info@devstudio.com"
+                class="link contact-us__link active-link header-link"
+              >
+                <svg class="contact-us__mail-icon contact-us__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="contact-us list">
-          <li class="contact-us__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="link contact-us__link active-link header-link"
-            >
-              <svg class="contact-us__mail-icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-us__item">
-            <a href="tel:+380961111111" class="link contact-us__link active-link header-link">
-              <svg class="contact-us__tel-icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="contact-us__networks-list list">
+            <li class="contact-us__networks-item">
+              <a href="" class="contact-us__networks-link link">Instagram</a>
+            </li>
+            <li class="contact-us__networks-item">
+              <a href="" class="contact-us__networks-link link">Twitter</a>
+            </li>
+            <li class="contact-us__networks-item">
+              <a href="" class="contact-us__networks-link link"> Facebook</a>
+            </li>
+            <li class="contact-us__networks-item">
+              <a href="" class="contact-us__networks-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -84,7 +135,7 @@
           </ul>
 
           <ul class="list examples__card-list">
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -105,7 +156,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -126,7 +177,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -147,7 +198,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img src="./images/example-4.jpg" alt="Наушники" width="370" height="294" />
@@ -163,7 +214,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img src="./images/example-5.jpg" alt="2 коробки" width="370" height="294" />
@@ -179,7 +230,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -200,7 +251,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img src="./images/example-7.jpg" alt="Журнал" width="370" height="294" />
@@ -216,7 +267,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -237,7 +288,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="examples__card-items">
               <a href="" class="link examples__link">
                 <div class="examples__thumb">
                   <img
@@ -372,5 +423,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

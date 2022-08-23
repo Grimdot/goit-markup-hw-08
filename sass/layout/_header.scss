@@ -1,43 +1,100 @@
-.header-nav,
-.header-container {
+.header {
+  position: relative;
+}
+
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.menu-btn--close {
+  position: absolute;
+  top: 21px;
+  right: 25px;
+}
+
+.header-menu {
   display: flex;
+
+  justify-content: space-between;
   align-items: center;
+}
+
+.header-menu__nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  background-color: $background-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99999;
+
+  &.is-open {
+    display: block;
+    transform: translate(100%, 0%);
+  }
 }
 
 .header-nav__list {
-  display: flex;
+  margin-bottom: 306px;
+}
+
+.header-nav__item {
+  @include font(40px, 500, 1.75, 0.02em);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .contact-us {
-  display: flex;
-  margin-left: auto;
+  margin-bottom: 64px;
 }
 
-.header-nav__item:not(:last-child),
-.contact-us__item:not(:last-child) {
-  margin-right: 50px;
+.contact-us__tel {
+  margin-bottom: 32px;
+
+  @include font(34px, 500, 1.18, 0.02em);
+  color: $accent-color;
 }
 
-.contact-us__mail-icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-
-  fill: currentColor;
-}
-
-.contact-us__tel-icon {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-
-  fill: currentColor;
-}
-
-.contact-us__link {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+.contact-us__mail {
+  @include font(24px, 500, 1.17, 0.02em);
   color: $secondary-color;
+}
+
+.contact-us__icon {
+  display: none;
+}
+
+.contact-us__networks-list {
+  display: flex;
+}
+
+.contact-us__networks-item {
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+}
+
+.contact-us__networks-link {
+  @include font(18px, 500, 1.22, 0.02em);
+  color: $accent-color;
+
+  &:hover {
+    color: teal;
+  }
 }
