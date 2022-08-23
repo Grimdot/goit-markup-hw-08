@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  height: 50px;
+
+  font-family: inherit;
+  @include font(16px, 700, 1.88, 0.06em);
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-btn {
+  min-width: 200px;
+  color: $contrast-text-color;
+  background-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    cursor: pointer;
+  }
+}

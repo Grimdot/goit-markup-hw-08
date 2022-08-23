@@ -1,0 +1,18 @@
+.logo {
+  margin-right: 93px;
+
+  font-family: 'Raleway', sans-serif;
+  @include font(26px, 700, 1.19, null);
+  color: inherit;
+}
+
+.logo--accent {
+  color: $accent-color;
+}
+
+.logo--contrast {
+  display: inline-block;
+
+  margin-bottom: 20px;
+  color: $contrast-text-color;
+}

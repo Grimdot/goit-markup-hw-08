@@ -1,0 +1,43 @@
+.header-nav,
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.contact-us {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-nav__item:not(:last-child),
+.contact-us__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-us__mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+.contact-us__tel-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+.contact-us__link {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  color: $secondary-color;
+}

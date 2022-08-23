@@ -1,0 +1,132 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $backgound-accent-color;
+  color: $contrast-text-color;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+}
+
+.footer-contacts__list {
+  text-align: left;
+  line-height: 1.71;
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__adress {
+  color: inherit;
+}
+
+.footer__contacts-link {
+  color: $footer-contacts;
+}
+
+.footer-join-us__title {
+  margin-bottom: 20px;
+
+  @include font(null, 700, 1.14, null);
+  text-transform: uppercase;
+}
+
+.footer-join-us__networks-list {
+  display: flex;
+}
+
+.footer-join-us__networks-item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer-join-us__networks-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.footer-join-us__networks-logo {
+  width: 20px;
+  height: 20px;
+
+  fill: $contrast-text-color;
+}
+
+.footer-subscribe {
+  margin-left: auto;
+}
+
+.footer-subscribe__invitation {
+  margin-bottom: 20px;
+
+  @include font(null, 700, 1.14, null);
+  text-transform: uppercase;
+}
+
+.footer-subscribe__form {
+  display: flex;
+}
+
+.footer-subscribe__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  background-color: $backgound-accent-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  color: $footer-input-color;
+
+  &::placeholder {
+    @include font(16px, null, 1.25, null);
+    align-items: center;
+    color: $footer-input-color;
+  }
+}
+
+.footer-subscribe__btn {
+  position: relative;
+
+  padding: 10px 28px;
+
+  text-align: left;
+}
+
+.footer-subscribe__icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+
+  width: 24px;
+  height: 24px;
+
+  fill: currentColor;
+}
