@@ -3,7 +3,6 @@
 }
 
 .team__member-card {
-  max-width: 480px;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -34,8 +33,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -84,4 +85,23 @@
   height: 20px;
 
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .team__member-list {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .team__member-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__member-list {
+    flex-wrap: nowrap;
+  }
 }

@@ -5,12 +5,17 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .customers__item {
-  display: block;
   flex-basis: calc((100% - 60px) / 2);
   height: 92px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .customers__link {
@@ -35,4 +40,7 @@
   height: 60px;
 
   fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    height: 92px;
+  }
 }

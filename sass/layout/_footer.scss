@@ -129,3 +129,55 @@
 
   fill: currentColor;
 }
+
+@media screen and (min-width: 768px) {
+  .footer__contacts-container {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .footer-contacts {
+    margin-right: 165px;
+  }
+
+  .footer-subscribe__input {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+  }
+
+  .footer-contacts {
+    text-align: left;
+    margin-right: 70px;
+  }
+
+  .footer-join-us__title {
+    text-align: left;
+  }
+
+  .footer-subscribe {
+    text-align: left;
+    margin-left: auto;
+  }
+
+  .footer-subscribe__input {
+    display: inline-block;
+    width: 358px;
+  }
+
+  .footer-subscribe__form {
+    display: flex;
+  }
+
+  .footer-subscribe__btn {
+    margin-left: 12px;
+  }
+}
