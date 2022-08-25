@@ -3,7 +3,8 @@
 }
 
 .examples__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -22,6 +23,10 @@
       margin-bottom: 30px;
     }
   }
+}
+
+.examples__img {
+  height: auto;
 }
 
 .examples__thumb {
@@ -70,7 +75,8 @@
 
 .examples__card-description {
   padding: 20px 24px;
-  height: 146px;
+
+  flex-grow: 1;
 
   border-bottom: 1px solid $border-color;
   border-left: 1px solid $border-color;

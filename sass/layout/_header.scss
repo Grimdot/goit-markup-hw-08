@@ -2,12 +2,17 @@
   display: none;
 }
 
-.header-menu__networks-list {
+.networks-list {
   display: none;
 }
 
+.current {
+  position: relative;
+  color: $accent-color;
+}
+
 @media screen and (max-width: 767px) {
-  .header-menu {
+  .header-container {
     display: flex;
 
     justify-content: space-between;
@@ -38,13 +43,13 @@
     fill: currentColor;
   }
 
-  .header-menu__nav {
+  .menu-container {
     position: fixed;
     top: 0;
     left: 0;
 
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -57,15 +62,15 @@
     flex-direction: column;
   }
 
-  .header-menu__nav.is-open {
+  .menu-container.is-open {
     transform: translate(0%, 0%);
   }
 
-  .header-menu__main-nav {
+  nav {
     margin-bottom: auto;
   }
 
-  .header-menu__main-nav-item {
+  .nav__item {
     @include font(40px, 500, 1.75, 0.02em);
 
     &:not(:last-child) {
@@ -73,11 +78,11 @@
     }
   }
 
-  .contact-us__icon {
+  .contacts-list__icon {
     display: none;
   }
 
-  .header-menu__contact-us-list {
+  .contacts-list {
     display: flex;
 
     flex-wrap: wrap;
@@ -85,25 +90,26 @@
     margin-bottom: 64px;
   }
 
-  .header-menu__contact-us-tel {
+  .contacts-list__tel {
     margin-bottom: 32px;
 
     @include font(34px, 500, 1.18, 0.02em);
     color: $accent-color;
   }
 
-  .header-menu__contact-us-mail {
+  .contacts-list__mail {
     @include font(24px, 500, 1.17, 0.02em);
     color: $secondary-color;
   }
 
-  .header-menu__networks-list {
+  .networks-list {
     display: flex;
+
     flex-wrap: wrap;
     row-gap: 5px;
   }
 
-  .header-menu__networks-item {
+  .networks-list__item {
     &:not(:last-child) {
       padding-right: 10px;
       border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -113,7 +119,7 @@
     }
   }
 
-  .header-menu__networks-link {
+  .networks-list__link {
     @include font(18px, 500, 1.22, 0.02em);
     color: $accent-color;
 
@@ -124,20 +130,16 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-list__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
+}
 
+@media screen and (min-width: 768px) {
   .current {
-    position: relative;
-    color: $accent-color;
-
     &::after {
       position: absolute;
       left: 0;
@@ -151,30 +153,47 @@
       border-radius: 2px;
     }
   }
-  .header-menu__main-nav-list {
+
+  .nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include font(null, 500, 1.14, 0.02em);
+  }
+
+  .nav__list {
     display: flex;
   }
-  .header-menu__main-nav-item {
+
+  .nav__item {
     &:not(:last-child) {
       margin-right: 50px;
     }
   }
-  .contact-us__icon {
+
+  .contacts-list {
+    margin-left: 90px;
+  }
+
+  .contacts-list__icon {
     fill: currentColor;
   }
-  .contact-us__mail-icon {
+
+  .contacts-list__mail-icon {
     width: 14px;
     height: 10px;
   }
-  .contact-us__tel-icon {
+
+  .contacts-list__tel-icon {
     width: 10px;
     height: 14px;
   }
-  .header-menu__contact-us-text {
+
+  .contacts-list__item-text {
     padding-left: 8px;
   }
 
-  .contact-us__link {
+  .contacts-list__link {
     display: flex;
 
     @include font(12px, 500, 1.17, 0.02em);
@@ -182,34 +201,34 @@
     align-items: center;
     text-align: left;
   }
-  .header-menu__nav {
+
+  .menu-container {
     display: flex;
-    margin-left: 91px;
+    margin-left: auto;
 
     align-items: center;
   }
-  .header-menu {
+
+  .header-container {
     display: flex;
+
     align-items: center;
   }
 
-  .header-menu__contact-us-list {
+  .header-container__contacts-list {
     margin-left: 98px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-menu__main-nav {
-    margin-left: 91px;
-  }
-
-  .header-menu__contact-us-list {
+  .contacts-list {
     display: flex;
     margin-left: 286px;
 
     align-items: center;
   }
-  .header-menu__contact-us-item {
+
+  .contacts-list__item {
     &:not(:last-child) {
       margin-right: 30px;
     }
