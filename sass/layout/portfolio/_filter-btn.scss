@@ -10,6 +10,7 @@
 }
 
 .examples__filter-btn {
+  min-width: 73px;
   padding: 6px 22px;
 
   @include font(16px, 500, 1.63, null);
